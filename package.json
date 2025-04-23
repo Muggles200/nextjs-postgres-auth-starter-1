@@ -4,27 +4,39 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev"
   },
   "dependencies": {
+    "@prisma/client": "^6.6.0",
     "@types/node": "^20.10.5",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
     "bcrypt-ts": "^5.0.0",
-    "drizzle-orm": "^0.29.2",
+    "clsx": "^2.1.1",
     "geist": "^1.2.0",
+    "lucide-react": "^0.503.0",
     "next": "^14.0.4",
     "next-auth": "5.0.0-beta.4",
-    "postgres": "^3.4.3",
+    "otplib": "^12.0.1",
+    "qrcode.react": "^4.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.5.2",
+    "tailwind-merge": "^3.2.0",
+    "zod": "^3.24.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "eslint": "8.56.0",
     "eslint-config-next": "^14.0.4",
     "postcss": "^8.4.32",
+    "prisma": "^6.6.0",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.3.3"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   }
 }
